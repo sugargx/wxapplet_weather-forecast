@@ -1,0 +1,105 @@
+page{
+  width: 100%;
+  height: 100%;
+  /*更改页面字体 */
+  font-family: 'Comic Sans MS', cursive;
+  /* 因为要下拉刷新所以设置为相对，而不能是绝对 */
+  position: relative;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.bgi{
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  /* 作为背景图，其他的都要放在其上面 */
+  /* 绝对定位 */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.body{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.body .header{
+  /* 使用弹性布局居中 */
+  display: flex;
+  justify-content: center;
+  
+  margin-top: 50rpx;
+
+  /* 将图片居中对齐 */
+  align-items: center;
+}
+.body .header view{
+  /* 将view内的三个text竖着排列 */
+  display: flex;
+  flex-direction: column;
+}
+.body .header image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.body .header text{
+  color: white;
+  font-weight: bolder;
+}
+.header view .txtaph{
+  /* 字体透明度 */
+  /* color: rgb(255, 255, 255);
+  opacity: 0.6; */
+  color: rgba(255, 255, 255, 0.8);
+  /* padding-left: 30rpx; */
+}
+
+.section {
+  color: rgba(255,255,255, 0.7);
+  font-size: 220rpx;
+  text-align: center;
+}
+
+.ari-qulity {
+  text-align: center;
+}
+.ari-qulity>text {
+  background: #A5CE1B;
+  border-radius: 10rpx;
+  color: white;
+  padding: 5rpx 15rpx;
+}
+.weather-detail {
+  margin: 30rpx auto;
+  width: 590rpx;
+  padding: 10rpx 30rpx;
+  /* 背景颜色+透明度 */
+  background: rgba(255,255,255,0.2);
+  border-radius: 25rpx;
+  color: rgba(255,255,255, 0.7);
+}
+.weather-detail>view>text{
+  display: inline-block;
+  width: 50%;
+}
+.forecast {
+  margin: 50rpx auto;
+  width: 650rpx;
+  background: rgba(255,255,255,0.2);
+  border-radius: 25rpx;
+
+  display: flex;
+  justify-content: space-around;
+  
+  font-size: 30rpx;
+  text-align: center;
+  color: rgba(255,255,255, 0.7);
+  padding: 15rpx 0;
+}

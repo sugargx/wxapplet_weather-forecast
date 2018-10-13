@@ -1,0 +1,51 @@
+<view class='container'>
+  <!-- 添加背景图片 -->
+  <image src='{{backImg}}' class='bgi' mode='aspectFill'></image>
+  <!-- 所有的内容 -->
+  <view class='body'>
+    <view class='header'>
+      <!-- 左部文字 -->
+      <image src='{{nowweatherImg}}'></image>
+      <!-- 右边文字 -->
+      <view>
+        <text style='font-size: 80rpx;'>{{cityname}}</text>
+        <text class='txtaph'>{{weekday}}</text>
+        <text class='txtaph'>{{weatherinfo}}</text>
+      </view>
+    </view>
+
+    <view class='section'>
+      <text>{{nowtemp}}</text> °C
+    </view>
+    <view class='ari-qulity'>
+      <text>空气质量：<text>{{pmvalue}}</text></text>
+    </view>
+    <view class='weather-detail'>
+      <view>
+        <text>风向：{{winddir}}</text>
+        <text>体感温度： {{feeltmp}}°C</text>
+      </view>
+      <view>
+        <text>风力：{{windsc}}级</text>
+        <text>相对湿度： {{hum}}</text>
+      </view>
+    </view>
+
+    <view class='forecast'>
+      <block wx:for="{{forecastData}}">
+
+        <view>
+          <image style='width:120rpx; height:120rpx;' mode='aspectFit' src='../../images/140.png'></image>
+          <view>
+            <text>{{item.date}}{{item.cond_txt_d}}</text>
+          </view>
+          <view>
+            <text>{{item.tmp_min}}°C ~ {{item.tmp_max}}°C</text>
+          </view>
+        </view>
+
+      </block>
+    </view>
+
+  </view>
+</view>
